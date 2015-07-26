@@ -2,4 +2,7 @@
 
 {% block body %}
     Homepage.
+    {% if app.user %}
+        {{ app.user.username }}
+    {% endif %}
 {% endblock %}

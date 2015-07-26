@@ -39,5 +39,5 @@ security:
         # require ROLE_ADMIN for /admin*
         - { path: ^/$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/registration$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/, roles: IS_AUTHENTICATED_FULLY }

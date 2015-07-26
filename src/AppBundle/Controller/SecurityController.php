@@ -4,13 +4,9 @@ namespace AppBundle\Controller;
 
 
 use Symfony\Component\HttpFoundation\Request;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 class SecurityController extends BaseController
 {
-    /**
-     * @Route("/login", name="login")
-     */
     public function loginAction(Request $request)
     {
         $authenticationUtils = $this->get('security.authentication_utils');
@@ -31,21 +27,15 @@ class SecurityController extends BaseController
         );
     }
 
-    /**
-     * @Route("/login_check", name="login_check")
-     */
-    public function loginCheckAction()
-    {
-        // this controller will not be executed,
-        // as the route is handled by the Security system
-    }
-
-    /**
-     * @Route("/logout", name="logout")
-     */
-    public function logoutAction()
-    {
-        // this controller will not be executed,
-        // as the route is handled by the Security system
-    }
+//    public function loginCheckAction()
+//    {
+//        // this controller will not be executed,
+//        // as the route is handled by the Security system
+//    }
+//
+//    public function logoutAction()
+//    {
+//        // this controller will not be executed,
+//        // as the route is handled by the Security system
+//    }
 }
